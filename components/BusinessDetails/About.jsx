@@ -1,26 +1,26 @@
 import { View, Text } from "react-native";
 import React from "react";
-import UserIntro from "../../components/Profile/UserIntro";
-import MenuList from "../../components/Profile/MenuList";
 
-export default function Profile() {
+export default function About({ business }) {
   return (
     <View
       style={{
+        backgroundColor: "white",
         padding: 20,
       }}
     >
       <Text
         style={{
+          fontSize: 20,
           fontFamily: "outfit-bold",
-          fontSize: 35,
         }}
       >
-        Profile
+        About
       </Text>
-
-      <UserIntro />
-      <MenuList />
+      <Text style={{
+        fontFamily: "outfit",
+        lineHeight: 20,
+      }}>{business.about}</Text>
     </View>
   );
 }
